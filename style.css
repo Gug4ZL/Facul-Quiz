@@ -1,0 +1,257 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor0: #011C40;
+    --cor1: #012340;
+    --cor2: #db3eb1;
+    --cor3: #10121c00;
+    --cor4: #000000;
+    --font1: 'montserrat';
+}
+
+body,
+html {
+    height: 100%;
+}
+
+body {
+    color: white;
+    letter-spacing: 2px;
+    font-family: var(--font1);
+    font-size: max(23px, 3vw);
+    background: #a34c00;
+    background: linear-gradient(34deg, rgba(163, 76, 0, 1) 29%, rgba(255, 255, 255, 1) 100%);
+    overflow: hidden;
+}
+
+#text-principal {
+
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin-top: 10%;
+    font-size: 1.5em;
+    opacity: 0;
+    transform: translateX(-200px);
+    animation: slideIn 1.5s ease-out forwards;
+    text-shadow: 0px 0px 0 rgb(211, 211, 211),
+        1px 1px 0 rgb(167, 167, 167), 2px 2px 1px rgba(0, 0, 0, 0), 2px 2px 1px rgba(0, 0, 0, 0.5), 0px 0px 1px rgba(0, 0, 0, .2);
+}
+
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+span {
+    color: #a34c00;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+
+.corpo {
+    width: 70%;
+    height: 100%;
+    margin: 5vh auto 0;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.quiz {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.quiz>h2 {
+    font-size: min(24px, 4vw);
+}
+
+.btn {
+    display: block;
+    width: 90%;
+    margin: 40px auto;
+    padding: 15px 40px;
+    background-color: #fff;
+    color: #a34c00;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.5em;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    transition: all 0.7s ease;
+    box-shadow: rgba(0, 0, 0, 0.26);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1.5s ease-out forwards;
+    animation-delay: 1s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.btn:hover {
+    background-color: #a34c00;
+    color: #fff;
+    transform: scale(1.5);
+}
+
+.btn:disabled {
+    cursor: no-drop;
+}
+
+#frase {
+    margin-top: 70px;
+    font-size: min(18px, 4vw);
+    color: #ffffff;
+    text-shadow: 0px 0px 0 rgb(211, 211, 211),
+        1px 1px 0 rgb(167, 167, 167), 2px 2px 1px rgba(0, 0, 0, 0), 2px 2px 1px rgba(0, 0, 0, 0.5), 0px 0px 1px rgba(0, 0, 0, .2);
+}
+
+#proximo {
+    display: none;
+    margin: 5px auto;
+    width: 250px;
+    min-width: 180px;
+    cursor: pointer;
+    color: #000000 solid #000000;
+    border-radius: 20px;
+    padding: 15px 0;
+    font-size: min(16px, 2.5vw);
+    font-family: var(--font1);
+    transition: .5s;
+    letter-spacing: 2px;
+    background-color: #fff;
+    box-sizing: border-box;
+    margin-top: 45px;
+    box-shadow: rgba(0, 0, 0, 0.26) 6px 6px 10px;
+    margin-bottom: 30px;
+}
+
+#proximo:hover {
+    color: black;
+    background-color: #a34c00;
+    font-weight: bold;
+    border-color: #a34c00;
+    box-shadow: none;
+}
+
+.correct {
+    color: rgb(0, 79, 0);
+    background-color: rgb(114, 199, 114);
+    border-color: rgb(114, 199, 114);
+}
+
+.incorrect {
+    color: rgb(78, 3, 3);
+    background-color: rgb(249, 28, 28);
+    border-color: rgb(249, 28, 28);
+
+}
+
+#alternativasButton {
+    margin-top: 60px;
+}
+
+@media screen and (max-width: 500px) {
+    .btn {
+        padding: 5px;
+        margin: 25px auto;
+    }
+
+    #proximo {
+        min-width: 120px;
+
+    }
+}
+
+
+.dev,
+.sobrenos,
+.tec {
+    padding: 17px;
+}
+
+.dev,
+.sobrenos {
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.menu {
+    columns: 1;
+    list-style: none;
+}
+
+.titulof {
+    font-size: min(18px, 2.5vw);
+    margin-bottom: 10px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-bottom: 0;
+}
+
+#questoes {
+    color: #ffffff;
+    text-shadow: 0px 0px 0 rgb(211, 211, 211),
+        1px 1px 0 rgb(167, 167, 167), 2px 2px 1px rgba(0, 0, 0, 0), 2px 2px 1px rgba(0, 0, 0, 0.5), 0px 0px 1px rgba(0, 0, 0, .2);
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: black;
+}
+
+
+
+footer>ul>li {
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
+
+.Unicid {
+    background-color: #000000;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1005;
+    text-align: center;
+    margin: 0;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+}
+
+h5 {
+    color: #b74bff;
+    text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.74);
+}
