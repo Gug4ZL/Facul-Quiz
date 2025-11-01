@@ -4,16 +4,10 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
 }
 
-:root {
-    --cor0: #011C40;
-    --cor1: #012340;
-    --cor2: #db3eb1;
-    --cor3: #10121c00;
-    --cor4: #000000;
-    --font1: 'montserrat';
-}
 
 body,
 html {
@@ -170,19 +164,6 @@ span {
     margin-top: 60px;
 }
 
-@media screen and (max-width: 500px) {
-    .btn {
-        padding: 5px;
-        margin: 25px auto;
-    }
-
-    #proximo {
-        min-width: 120px;
-
-    }
-}
-
-
 .dev,
 .sobrenos,
 .tec {
@@ -255,3 +236,69 @@ h5 {
     color: #b74bff;
     text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.74);
 }
+
+
+
+
+
+
+
+
+
+
+/*  Estilos responsivos  */
+
+
+ @media screen and (max-width: 500px) {
+
+
+    #text-principal {
+        font-size: 2em;
+        margin-top: 30%;
+    }
+
+    h2 {
+        font-size: 34.5px !important;
+    }
+
+    .btn {
+        padding: 5px;
+        margin: 25px auto;
+        height: 4.8vh;
+        width: 80vw;
+        font-size: 0.7em;
+        font-weight: bold;
+    }
+
+    
+    @media (hover: none) {
+        .btn:hover {
+            background-color: inherit;
+            color: inherit;
+            transform: none;
+            cursor: default;
+        }
+    }
+
+ 
+    .btn.correct,
+    .btn.correct:hover {
+        color: rgb(0, 79, 0);
+        background-color: rgb(114, 199, 114);
+        border-color: rgb(114, 199, 114);
+    }
+
+    .btn.incorrect,
+    .btn.incorrect:hover {
+        color: rgb(78, 3, 3);
+        background-color: rgb(249, 28, 28);
+        border-color: rgb(249, 28, 28);
+    }
+}
+
+
+
+    #proximo {
+        min-width: 120px;
+
+    }
