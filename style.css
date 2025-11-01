@@ -252,19 +252,25 @@ h5 {
  @media screen and (max-width: 500px) {
 
 
+
     #text-principal {
         font-size: 2em;
-        margin-top: 30%;
+        margin-top: 20%;
     }
 
     h2 {
         font-size: 34.5px !important;
     }
 
+
+    .quiz {
+        margin-top: 20%;
+    }
+
     .btn {
         padding: 5px;
         margin: 25px auto;
-        height: 4.8vh;
+        height: 4.9vh;
         width: 80vw;
         font-size: 0.7em;
         font-weight: bold;
